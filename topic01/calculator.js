@@ -1,0 +1,10 @@
+const number_1 = 10;
+const number_2 = 5;
+const sum = number_1 + number_2;
+console.log(`The sum of ${number_1} and ${number_2} is ${sum}.`);
+const subtraction = number_1 - number_2;
+console.log(`The subtraction of ${number_1} and ${number_2} is ${subtraction}.`);
+const multiplication = number_1 * number_2;
+console.log(`The multiplication of ${number_1} and ${number_2} is ${multiplication}.`);
+const division = number_1 / number_2;
+console.log(`The division of ${number_1} and ${number_2} is ${division}.`);
