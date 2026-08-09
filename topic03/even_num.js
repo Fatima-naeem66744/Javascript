@@ -1,0 +1,8 @@
+const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let evenNumbers1 = numbers1.filter(num => num % 2 === 0);
+let evenNumbers2 = numbers2.filter(num => num % 2 === 0);
+console.log(evenNumbers1);
+console.log(evenNumbers2);
+
+
