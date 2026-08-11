@@ -2,4 +2,4 @@
 ## grade_calculation.js : We use here arrow function 
 ## fizzbuzz.js : we use function expression to demonstrate the syntax
 # Jam recording : 
-https://jam.dev/c/463e76c4-457a-4d20-a847-b109182b7203
+[topic 02 jam recording proof](https://jam.dev/c/ce4364f0-66fc-44a6-9b8c-51c5eed79638)

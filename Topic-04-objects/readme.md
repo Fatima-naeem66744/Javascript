@@ -1,5 +1,7 @@
-# JAM RECORDING:
-https://jam.dev/c/116f41ad-2ea3-4896-9b02-4258d57acec5
+
+## Jam Recording Proof
+[Watch the Topic 04 Script Execution Recording](https://jam.dev/c/116f41ad-2ea3-4896-9b02-4258d57acec5
+)
 
 # Explanation of components :
 # Destructuring Assignment Syntax
