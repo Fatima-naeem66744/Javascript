@@ -1,0 +1,5 @@
+# JAM RECORDING
+[DAY 08 JAM RECORDING LINK IS HERE]()
+# Day 08 – Async JavaScript
+
+This task demonstrates the same dependent asynchronous flow — **User → Posts → Comments** — implemented in three different ways: `callback-hell.js` uses nested callbacks with `setTimeout()` to simulate sequential API calls, `promise-version.js` rewrites the same mock APIs using Promises with `.then()`, `.catch()`, and `.finally()`, and `async-await-version.js` uses `async/await` with `try/catch` for cleaner asynchronous code and error handling. One mock API call randomly fails to demonstrate real error handling, while all three versions produce the same final data when successful. Console output shows the order in which each asynchronous operation completes, proving that the three implementations follow the same asynchronous flow using different patterns.
