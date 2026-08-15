@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #eee6ff, #dcd0ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(100, 70, 150, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #6845a5;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 13px 16px;
+    font-size: 16px;
+    border: 2px solid #d8c8f5;
+    border-radius: 12px;
+    outline: none;
+    color: #4b3869;
+    background: #faf8ff;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #9b7bd3;
+    box-shadow: 0 0 0 4px rgba(155, 123, 211, 0.15);
+}
+
+input::placeholder {
+    color: #a99bbd;
+}
+
+button {
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    background: #8e6bc5;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #7652ae;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(118, 82, 174, 0.25);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.loading {
+    margin-top: 20px;
+    text-align: center;
+    color: #8062b3;
+    font-weight: 600;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 13px;
+    background: #fff0f5;
+    color: #c45b7c;
+    border: 1px solid #f3c4d4;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.user-result {
+    margin-top: 25px;
+    padding: 22px;
+    background: #faf8ff;
+    border: 2px solid #e2d8f5;
+    border-radius: 18px;
+    color: #4f4262;
+}
+
+.user-result h2 {
+    color: #6845a5;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.user-result p {
+    margin: 10px 0;
+    padding: 9px 12px;
+    background: #ffffff;
+    border-radius: 10px;
+    border-left: 4px solid #b59add;
+}
+
+.user-result strong {
+    color: #7652ae;
+}
+
+.hidden {
+    display: none;
+}
