@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: #f4f4f4;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form,
+#filters {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+form {
+    display: grid;
+    gap: 12px;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background: #222;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#filters {
+    display: grid;
+    gap: 12px;
+}
+
+#filters h2 {
+    margin-top: 0;
+}
+
+#expenseList {
+    display: grid;
+    gap: 12px;
+}
+
+.expense-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.expense-item h3 {
+    margin: 0 0 8px;
+}
+
+.expense-item p {
+    margin: 4px 0;
+}
+
+.expense-right {
+    text-align: right;
+}
+
+.expense-right strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background: #c0392b;
+}
+
+.edit-btn {
+    background: #2980b9;
+    margin-right: 5px;
+}
+
+#categoryBreakdown {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#categoryBreakdown h2 {
+    margin-top: 0;
+}
+
+#categoryTotals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#categoryTotals span {
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+.empty-message {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#total {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .expense-right {
+        text-align: left;
+    }
+}
