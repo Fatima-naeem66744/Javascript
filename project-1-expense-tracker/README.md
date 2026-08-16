@@ -1,3 +1,9 @@
+# live link of app 
+[link](https://javascript-eta-nine.vercel.app/)
+
+# jam recording 
+[JAM RECORDING LINK](https://jam.dev/c/356ce3fb-48f3-442d-be47-095f9b88d2e4)
+
 # Expense Tracker
 
 A beginner-friendly expense tracker built with plain HTML, CSS, and Vanilla JavaScript (ES Modules). Add, edit, delete, and filter expenses — everything persists in your browser via localStorage.
@@ -36,3 +42,4 @@ Responsibilities are split by purpose:
 - `ui.js` — paints the screen and reads inputs; imports nothing from the other modules.
 - `main.js` — imports from all three; handles user actions, saves, and re-renders.
 
+https://javascript-eta-nine.vercel.app/
