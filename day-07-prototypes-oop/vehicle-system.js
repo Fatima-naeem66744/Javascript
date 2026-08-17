@@ -87,3 +87,5 @@ const bike1 = new Bike("Giant", "Escape 3", 2021);
 bike1.stop();
 bike1.start(); // demonstrate the overridden method
 bike1.ringBell();
+// Display the total number of vehicles created
+console.log(`Total vehicles created: ${Vehicle.totalVehicles}`);
