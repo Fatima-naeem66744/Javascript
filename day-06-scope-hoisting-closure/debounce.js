@@ -3,7 +3,7 @@
 // The inner function keeps access to timer because JavaScript's lexical scoping/closure preserves the outer function's variable for the inner function.
 
 function debounce(fn, delay) {
-    let timer;
+    let timer; // Private outer variable to hold the timer ID
 
     // Return an inner function
     return function () {
