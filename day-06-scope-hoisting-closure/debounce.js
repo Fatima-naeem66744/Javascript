@@ -1,5 +1,7 @@
 // Closure-Based Mini Utility: debounce()
 
+// The inner function keeps access to timer because JavaScript's lexical scoping/closure preserves the outer function's variable for the inner function.
+
 function debounce(fn, delay) {
     let timer;
 
@@ -37,6 +39,16 @@ function sayGoodbye() {
 }
 const debouncedGoodbye = debounce(sayGoodbye, 3000);
 
-// Test it
+// Hello prints only one time after 2 seconds, even though we called it multiple times 
 debouncedHello();
+debouncedHello();
+debouncedHello();
+debouncedHello();
+debouncedHello();
+
+// Goodbye prints only one time after 3 seconds, even though we called it multiple times
+debouncedGoodbye();
+debouncedGoodbye();
+debouncedGoodbye();
+debouncedGoodbye();
 debouncedGoodbye();

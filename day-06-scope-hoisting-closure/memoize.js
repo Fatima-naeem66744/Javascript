@@ -1,3 +1,8 @@
+// Closure explanation:
+// The returned inner function remembers the cache created by the
+// outer memoize function even after memoize() has returned.
+// This allows the same cache to be used across multiple calls.
+
 // outer function
 function memoize(fn) {
     const cache = {};
