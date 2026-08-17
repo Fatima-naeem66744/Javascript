@@ -4,6 +4,7 @@ const loading = document.getElementById("loading");
 const error = document.getElementById("error");
 const userResult = document.getElementById("userResult");
 const postBtn = document.getElementById("postBtn");
+const errorBtn = document.getElementById("errorBtn");
 
 const API_URL = "https://jsonplaceholder.typicode.com/users";
 
@@ -94,9 +95,40 @@ function loadCachedUser() {
         localStorage.removeItem("lastUser");
     }
 }
+async function testError() {
+
+    loading.classList.remove("hidden");
+    error.classList.add("hidden");
+
+    try {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/this-does-not-exist"
+        );
+
+        if (!response.ok) {
+            throw new Error("Demo error: API request failed.");
+        }
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (err) {
+
+        error.textContent = err.message;
+        error.classList.remove("hidden");
+
+    } finally {
+
+        loading.classList.add("hidden");
+
+    }
+}
 
 // Bind events safely
 if (fetchBtn) fetchBtn.addEventListener("click", fetchUser);
 if (postBtn) postBtn.addEventListener("click", createDemoPost);
+if (errorBtn) errorBtn.addEventListener("click", testError);
 
 loadCachedUser();
