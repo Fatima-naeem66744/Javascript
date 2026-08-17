@@ -5,7 +5,7 @@
 
 // outer function
 function memoize(fn) {
-    const cache = {};
+    const cache = {}; // Private outer variable to hold cached results
 
     // inner function
     return function (...args) {

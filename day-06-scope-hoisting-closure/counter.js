@@ -4,7 +4,7 @@
 // This allows the same cache to be used across multiple calls.
 
 function createCounter(initialValue = 0) {
-  let count = initialValue; // Private outer variable
+  let count = initialValue; // Private outer variable to hold the counter value
 
   // Returned object holding inner methods
   return {
