@@ -1,0 +1,209 @@
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #71717a;
+  --line: #e4e4e7;
+  --error: #b3261e;
+
+  --sans: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111113;
+    --surface: #17171a;
+    --text: #e4e4e7;
+    --muted: #9d9da6;
+    --line: #26262b;
+    --error: #f17a6b;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+  text-align: left;
+  min-height: 100svh;
+}
+
+/* spacing + divider handled by the cards */
+#root > br,
+hr {
+  display: none;
+}
+
+/* section cards */
+#root > div {
+  padding: 32px;
+  margin-bottom: 48px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+/* Task 1 — centered counter */
+#root > div:first-of-type {
+  text-align: center;
+  padding: 48px 32px;
+}
+
+/* Task 2 — left-aligned editorial form */
+#root > div:last-of-type {
+  border-radius: 0;
+  border-left: 3px solid var(--text);
+}
+
+/* task headings */
+#root > div > h1 {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  margin: 0 0 32px;
+}
+
+#root > div > h1::before {
+  content: "01";
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#root > div:last-of-type > h1::before {
+  content: "02";
+}
+
+/* buttons */
+button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+button:hover {
+  border-color: var(--text);
+}
+
+button:active {
+  background: var(--bg);
+}
+
+/* counter (task 1) */
+#root > div:first-of-type > div {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+#root > div:first-of-type > h2 {
+  font-family: var(--mono);
+  font-size: 64px;
+  font-weight: 200;
+  letter-spacing: -2px;
+  color: var(--text);
+  margin: 0;
+}
+
+/* form (task 2) */
+#root > div:last-of-type > br {
+  display: none;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+}
+
+#root > div:last-of-type > label:not(:first-of-type) {
+  margin-top: 24px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 15px;
+  padding: 6px 0 8px;
+  margin: 4px 0 0;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+input:focus {
+  border-bottom-color: var(--text);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+#root > div:last-of-type > p {
+  font-size: 13px;
+  color: var(--error) !important;
+  margin: 6px 0 0;
+}
+
+#root > div:last-of-type > button {
+  margin-top: 24px;
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+#root > div:last-of-type > button:hover {
+  opacity: 0.8;
+  border-color: var(--text);
+}
