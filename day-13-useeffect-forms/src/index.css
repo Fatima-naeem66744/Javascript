@@ -1,0 +1,154 @@
+/* ------------------------------
+   Basic Reset
+------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f3ff;
+  color: #333;
+  min-height: 100vh;
+}
+
+
+/* ------------------------------
+   Main App
+------------------------------ */
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+
+/* ------------------------------
+   Heading
+------------------------------ */
+
+h1 {
+  text-align: center;
+  color: #6c5ce7;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+
+/* ------------------------------
+   Search Input
+------------------------------ */
+
+input {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 35px;
+
+  padding: 15px 20px;
+
+  border: 2px solid #d8d2ff;
+  border-radius: 12px;
+
+  background: white;
+  color: #333;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 4px #e8e5ff;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+
+/* ------------------------------
+   Loading & Error
+------------------------------ */
+
+.app > p {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 17px;
+}
+
+.app > p:first-of-type {
+  color: #6c5ce7;
+}
+
+
+/* ------------------------------
+   User Cards
+------------------------------ */
+
+.user-card {
+  background: white;
+
+  padding: 20px;
+  margin-bottom: 15px;
+
+  border-radius: 15px;
+
+  border: 1px solid #e6e2ff;
+
+  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.08);
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.15);
+}
+
+.user-card h2 {
+  color: #5f4fd8;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.user-card p {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  input {
+    font-size: 15px;
+  }
+
+  .user-card {
+    padding: 17px;
+  }
+}
