@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+header {
+  height: 70px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+header + div {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+aside {
+  width: 220px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 25px 20px;
+}
+
+aside h2 {
+  margin-bottom: 20px;
+}
+
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+aside a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+aside a:hover {
+  background: #f0f0f0;
+}
+
+main {
+  flex: 1;
+  padding: 30px;
+}
+
+main h1 {
+  margin-bottom: 25px;
+}
+.task-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.task-card h2 {
+  margin-bottom: 10px;
+}
+
+.task-status {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
