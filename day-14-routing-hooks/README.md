@@ -3,3 +3,4 @@
 # README.md
 
 This single-page React application demonstrates core React Router navigation and essential performance hooks including `useRef`, `useMemo`, `useCallback`, and a custom `useFetch` hook. Built with dynamic client-side routing across home, about, and user detail views (`/users/:id`), the app illustrates DOM focus management on load, memoized list filtering that avoids recalculation during unrelated re-renders, and optimized child component rendering using `React.memo` paired with `useCallback`. Additionally, it retrieves dynamic third-party API data through a standalone, reusable custom fetch hook to display detailed profile information smoothly without full page reloads.
+that it 
