@@ -4,10 +4,10 @@ import MainContent from "./maincontent";
 
 function Layout({ children }) {
   return (
-    <div>
+    <div className="min-h-screen bg-slate-50">
       <Header />
 
-      <div>
+      <div className="flex min-h-[calc(100vh-70px)] flex-col md:flex-row">
         <Sidebar />
 
         <MainContent>
