@@ -2,9 +2,12 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getProductById } from "../api/productsApi";
+import { ADD_TO_CART } from "../reducers/cartReducer";
+import { useCart } from "../context/useCart";
 
 export default function ProductDetails() {
   const { id } = useParams();
+  const { dispatch } = useCart();
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -74,6 +77,13 @@ export default function ProductDetails() {
               {product.rating.count} reviews
             </p>
           </div>
+
+          <button
+            onClick={() => dispatch({ type: ADD_TO_CART, payload: product })}
+            className="mt-6 rounded bg-green-600 px-4 py-2 text-white"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

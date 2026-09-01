@@ -1,11 +1,8 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../context/CartContext";
+import { useCart } from "../context/useCart";
 
 export default function Header() {
-  const { cart } = useContext(CartContext);
-
-  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+  const { itemCount: totalItems } = useCart();
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md">

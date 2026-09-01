@@ -1,7 +1,18 @@
 
 import { Link } from "react-router-dom";
+import { ADD_TO_CART } from "../reducers/cartReducer";
+import { useCart } from "../context/useCart";
 
 export default function ProductCard({ product }) {
+  const { dispatch } = useCart();
+
+  const handleAddToCart = () => {
+    dispatch({
+      type: ADD_TO_CART,
+      payload: product,
+    });
+  };
+
   return (
     <div className="rounded-lg border p-4">
       <img
@@ -18,12 +29,21 @@ export default function ProductCard({ product }) {
         ${product.price}
       </p>
 
-      <Link
-        to={`/products/${product.id}`}
-        className="mt-4 inline-block rounded bg-black px-4 py-2 text-white"
-      >
-        View Details
-      </Link>
+      <div className="mt-4 flex gap-2">
+        <Link
+          to={`/products/${product.id}`}
+          className="rounded bg-black px-4 py-2 text-white"
+        >
+          View Details
+        </Link>
+
+        <button
+          onClick={handleAddToCart}
+          className="rounded bg-green-600 px-4 py-2 text-white"
+        >
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 }
