@@ -97,3 +97,11 @@ Derived totals with useMemo
 * `useMemo`
 * Derived state
 * Global client-side state management
+
+# phase 4 jam:
+[Phase 4 – Multi-Step Checkout Flow – Proof of Completion](https://jam.dev/c/2ffb950b-5cb1-47ec-aec9-6f99b0a3f87f)
+
+## Phase 4 — Multi-Step Checkout Flow
+
+In this phase, a complete multi-step checkout flow was added to the React e-commerce project. The checkout is divided into three steps: **Shipping, Payment, and Review**, with a visible progress indicator. All checkout inputs are controlled through shared state in `Checkout.jsx`, allowing users to move backward and forward without losing entered information. Shipping and payment fields are validated before the user can continue, including required fields, email/card formatting, expiry date, and CVV validation. The Review step displays the customer's shipping and payment information along with the actual products, quantities, subtotal, and total from the global cart state. Order submission is simulated with a loading state and a successful order confirmation containing a generated order number. After a successful order, the `CLEAR_CART` action empties the global cart so the cart page and cart badge are updated accordingly. The checkout structure was separated into reusable components: `ShippingStep`, `PaymentStep`, `ReviewStep`, and `OrderConfirmation`.
+

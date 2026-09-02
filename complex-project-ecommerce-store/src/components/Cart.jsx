@@ -68,6 +68,14 @@ export default function Cart() {
         <p className="text-lg">Subtotal: ${subtotal.toFixed(2)}</p>
         <p className="text-xl font-bold">Total: ${total.toFixed(2)}</p>
       </div>
+      <div className="mt-4 text-right">
+  <Link
+    to="/checkout"
+    className="inline-block rounded bg-black px-6 py-3 text-white"
+  >
+    Proceed to Checkout
+  </Link>
+</div>
     </div>
   );
 }
