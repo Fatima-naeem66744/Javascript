@@ -1,9 +1,9 @@
-
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { ADD_TO_CART } from "../reducers/cartReducer";
 import { useCart } from "../context/useCart";
 
-export default function ProductCard({ product }) {
+function ProductCard({ product }) {
   const { dispatch } = useCart();
 
   const handleAddToCart = () => {
@@ -48,3 +48,4 @@ export default function ProductCard({ product }) {
   );
 }
 
+export default memo(ProductCard);
