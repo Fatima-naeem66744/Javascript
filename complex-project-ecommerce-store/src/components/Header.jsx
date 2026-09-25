@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useCart } from "../context/useCart";
 
 export default function Header() {
+  // "Take the itemCount property from the
+  //  object and create a variable called itemCount."
   const { itemCount: totalItems } = useCart();
 
   return (
