@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 //import products from "./productsapi.jsx";
 import  { useState , useEffect } from "react";
 import {getProductById} from "./productsapi.jsx";
+import useCart from "../cart/usecart.jsx";
+import { ADD_TO_CART } from "../cart/cartreducer.jsx";
+
 
 export default function ProductDetails() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const {dispatch } = useCart();
+
 
   useEffect(() => {
     getProductById(id)
@@ -44,7 +49,26 @@ export default function ProductDetails() {
                 <p className="text-gray-600 leading-relaxed">{product.description}</p>
                 <p className="text-sm text-gray-400">Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
             </div>
-        </div>
+            <div>
+          <button
+            onClick={() => dispatch({ type: ADD_TO_CART, payload: product })}
+            className="mt-6 rounded bg-green-600 px-4 py-2 text-white"
+          >
+            Add to Cart
+          </button>
+    
+
+              
+             
+
+
+        
+
+                
+            </div>
+
+            </div>
+        
     )
 
 }

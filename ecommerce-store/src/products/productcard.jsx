@@ -1,11 +1,17 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
+import useCart from "../cart/usecart";
+import { ADD_TO_CART } from "../cart/cartreducer";
 
-export default function ProductCard({ product }) {
+
+function ProductCard({ product }) {
+  const { dispatch } = useCart();
+
   return (
     <div className="rounded-lg border p-4 shadow-sm bg-white flex flex-col justify-between">
       <div>
         <img 
-          src={product.title} 
+          src={product.image} 
           alt={product.title} 
           className="w-full h-48 object-cover rounded-md mb-4" 
         />
@@ -18,10 +24,11 @@ export default function ProductCard({ product }) {
         <Link to={`/products/${product.id}`} className="flex-1 text-center rounded bg-black px-4 py-2 text-white hover:bg-gray-800 transition">
           View Details
         </Link>
-        <button className="flex-1 rounded bg-green-600 px-4 py-2 text-white hover:bg-green-700 transition">
+        <button onClick={() => dispatch({ type: ADD_TO_CART, payload: product })} className="flex-1 rounded bg-green-600 px-4 py-2 text-white hover:bg-green-700 transition">
           Add to Cart
         </button>
       </div>
     </div>
   );
 }
+export default memo(ProductCard);
